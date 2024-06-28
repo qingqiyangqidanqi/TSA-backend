@@ -18,7 +18,8 @@ cors.init_app(app)
 
 @app.route('/')
 def hello_world():  # put application's code here
-    return 'Hello World!'
+    result={'code': 200, 'message': 'hello world!'}
+    return result
 
 
 @app.cli.command()  # 自定义指令
@@ -54,7 +55,7 @@ class userApi(MethodView):
                 } for user in users
             ]  # 列表推导式
             return {
-                'status': 'success',
+                'code': 200,
                 'message': '数据查询成功',
                 'results': results
             }
@@ -62,7 +63,7 @@ class userApi(MethodView):
         else:
             user: Users = Users.query.get(id)
             return {
-                'status': 'success',
+                'code': 200,
                 'message': '数据查询成功',
                 'results': {
                     'id': user.id,
@@ -91,7 +92,7 @@ class userApi(MethodView):
         db.session.add(book)
         db.session.commit()
         return {
-            'status': 'success',
+            'status': 200,
             'message': '数据添加成功',
         }
 
@@ -128,10 +129,14 @@ class userApi(MethodView):
             'message': '数据修改成功',
         }
 
-
+class agentsApi(MethodView):
+    def get(self):
+        return "This is a answer for agents.",200 if 1 is not None else 404
 
 user_view = userApi.as_view('user_api')
+agents_view = agentsApi.as_view('agents_api')
 app.add_url_rule('/users/', defaults={'id': None}, view_func=user_view, methods=['GET'])
+app.add_url_rule('/agents/', view_func=agents_view, methods=['GET'])
 # app.add_url_rule('/books', view_func=book_view, methods=['POST'])
 # app.add_url_rule('/books/<int:book_id>', view_func=book_view, methods=['GET','PUT','DELETE'])
 
