@@ -1,3 +1,5 @@
+# coding=utf-8
+
 from flask import Flask, request
 from flask.views import MethodView
 from extension import db, cors
