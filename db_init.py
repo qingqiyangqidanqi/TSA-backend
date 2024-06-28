@@ -17,7 +17,7 @@ class Users(db.Model):
     @staticmethod
     def init_db():
         rets = [
-            (1, 'test', '001', '123@123.com', '普通会员', '111', '365', 1),
+            (1, 'test', '001', '123@123.com', 'USER', 'https://p.qqan.com/up/2020-12/16070652276806379.jpg', '365', 1),
         ]
         for ret in rets:
             users = Users()
