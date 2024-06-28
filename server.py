@@ -146,6 +146,12 @@ def agent_4(user_input, sdi, evaluation, result, suggestion):
     analysis_and_suggestions = response.choices[0].message["content"].strip()
     return analysis_and_suggestions
 
+def result():
+    sdi = agent_1(user_input)
+    evaluation = agent_2(user_input, sdi)
+    result = agent_3(sdi, evaluation)
+    analysis_and_suggestions = agent_4(user_input, sdi, evaluation, result, teacher_or_peer_suggestion)
+    return sdi, evaluation, result, analysis_and_suggestions
 
 if __name__ == '__main__':
     sdi = agent_1(user_input)
