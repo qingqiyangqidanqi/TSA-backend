@@ -29,6 +29,8 @@ def forge():
          'avatar': 'https://p.qqan.com/up/2020-12/16070652276806379.jpg', 'member': 2, 'password': 'dog'},
         {'nickName': 'jason', 'openId': '111', 'email': '1030072717@163.com', 'type': 'ADMIN',
          'avatar': 'https://p.qqan.com/up/2020-12/16070652276806379.jpg', 'member': 3, 'password': '23020090092'},
+        {'nickName': 'likeke', 'openId': '222', 'email': '2422014722@qq.com', 'type': 'ADMIN',
+         'avatar': 'https://p.qqan.com/up/2020-12/16070652276806379.jpg', 'member': 4, 'password': '23020090095'},
     ]
     results = [
         {'email': '123@123.com',

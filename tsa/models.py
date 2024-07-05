@@ -12,7 +12,7 @@ class Users(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     nickName = db.Column(db.String(100), nullable=False)
     openId = db.Column(db.String(150), nullable=False)
-    email = db.Column(db.String(255), nullable=False)
+    email = db.Column(db.String(255), nullable=False, unique=True)
     type = db.Column(db.Enum('USER', 'ADMIN'), default='USER')
     avatar = db.Column(db.String(255))
     lacalDateTime = db.Column(db.DateTime, default=datetime.now())

@@ -1,0 +1,67 @@
+###
+POST http://127.0.0.1:5000/users
+Content-Type: application/json;charset=utf-8
+
+{
+  "email": null,
+  "password": "dog"
+}
+
+
+###
+POST http://127.0.0.1:5000/users
+Content-Type: application/json;charset=utf-8
+
+{
+  "email": "11111111",
+  "password": "cat"
+}
+
+
+###
+POST http://127.0.0.1:5000/users
+Content-Type: application/json;charset=utf-8
+
+{
+  "email": "123@123.com",
+  "password": "cat"
+}
+
+
+###
+POST http://127.0.0.1:5000/users
+Content-Type: application/json;charset=utf-8
+
+{
+  "email": "123@123.com",
+  "password": "dog"
+}
+
+
+###
+POST http://127.0.0.1:5000/users
+Content-Type: application/json;charset=utf-8
+
+{
+  "email": "2422014722@qq.com",
+  "password": "23020090095"
+}
+
+
+###
+POST http://127.0.0.1:5000/agents
+Content-Type: application/json;charset=utf-8
+
+{
+  "input": null
+}
+
+
+###
+POST http://127.0.0.1:5000/agents
+Content-Type: application/json;charset=utf-8
+
+{
+  "input": "Hello Teacher-Student-Agent!"
+}
+
